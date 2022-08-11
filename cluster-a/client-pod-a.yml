@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: client-pod-a
+  namespace: ns-a
+spec:
+  containers:
+  - args:
+    - /bin/bash
+    image: chenweien/alpine-plus:v2.0
+    imagePullPolicy: IfNotPresent
+    name: alpine
+    stdin: true
+    stdinOnce: true
+    tty: true
+  restartPolicy: Always

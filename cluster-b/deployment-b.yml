@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment-b
+  namespace: ns-b
+spec:
+  selector:
+    matchLabels:
+      app: app-b
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: app-b
+    spec:
+      containers:
+      - name: app-b
+        image: projects.registry.vmware.com/ncp/nginxdemos/hello:plain-text
+        ports:
+        - containerPort: 80

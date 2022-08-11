@@ -1,0 +1,14 @@
+{
+ "name": "dfw-section-marker",
+ "description": "Network profile to enable DFW section marking",
+ "parameters": {
+   "cni_configurations":
+   {
+      "type":"nsxt",
+      "parameters": {
+        "top_firewall_section_marker":"0ee9e094-bdcb-4b77-bf95-17d69dd1697e",
+        "bottom_firewall_section_marker":"faa0f405-418a-4543-a08b-b051e69a7d26"
+      }
+    }
+  }
+}
